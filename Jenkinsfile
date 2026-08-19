@@ -18,11 +18,11 @@ pipeline {
             steps {
                 sh 'mvn -B test'
             }
-            /* post {
+            post {
                 always {
-                    junit 'target/test-reports/*.xml'
+                    junit 'target/surefire-reports/*.xml'
                 }
-            } */
+            }
         }
         stage('Archive') {
             steps {
